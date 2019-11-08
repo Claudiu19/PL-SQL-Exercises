@@ -1,0 +1,8 @@
+CREATE OR REPLACE TYPE Employee AS OBJECT ( 
+  empno INTEGER,
+  ename VARCHAR(10),
+  dept  REF Departament,
+  sal INTEGER,
+  ORDER MEMBER FUNCTION orderMGR (E EMPLOYEE) RETURN INTEGER
+) NOT FINAL;
+/
